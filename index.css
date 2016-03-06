@@ -1,0 +1,53 @@
+body {
+  /* Location of the image */
+  background-image: url(img/doeshe.jpg);
+
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+
+  /* Background image is fixed in the viewport so that it doesn't move when
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #894699;
+}
+body { min-height: 100%; margin: 0; display: flex; justify-content: center; align-items: center; }
+button {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: none;
+  color: white;
+  font-family: Avenir, Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  background: #894699;
+  text-shadow: 0 3px 1px rgba(69, 8, 122, 0.8);
+  box-shadow: 0 8px 0 #55106a,
+    0 15px 20px rgba(0,0,0,.35);
+  text-transform: uppercase;
+  transition: .4s all ease-in;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  bottom: 50px;
+}
+/*button span { position: relative; }*/
+/* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
+.pressed {
+  padding-top: 3px;
+  transform: translateY(4px);
+  box-shadow: 0 4px 0 rgb(131, 15, 154),
+    0 8px 6px rgba(0,0,0,.45);
+}
