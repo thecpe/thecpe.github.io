@@ -35,18 +35,57 @@ dance.addEventListener('click', function(event) { playSound(); });
 
 function onclick() { console.log("Test");
   var gifs = [
-    "http://i.giphy.com/12MgUpnxEq3ypy.gif",
-    "http://i.giphy.com/l0O9yF8Mto1mdnogE.gif",
-    "http://i.giphy.com/l41m4yUAia33XkNwc.gif",
-    "http://i.giphy.com/LhSahsTMJio2A.gif",
-    "http://i.giphy.com/xIytx7kHpq74c.gif",
-    "http://i.giphy.com/NXWYyKAHim63u.gif",
-    "http://i.giphy.com/wP3wOy7woMBDW.gif",
-    "http://i.giphy.com/3YNaQqbBw3YJy.gif",
-    "http://i.giphy.com/LvomsQTyM4QQU.gif",
-    "img/approve.gif"
-]
-  $.backstretch(gifs[Math.floor(Math.random() * gifs.length)]);
+    {
+      "link": "http://i.giphy.com/12MgUpnxEq3ypy.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/l0O9yF8Mto1mdnogE.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/l41m4yUAia33XkNwc.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/LhSahsTMJio2A.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/xIytx7kHpq74c.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/NXWYyKAHim63u.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/wP3wOy7woMBDW.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/3YNaQqbBw3YJy.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/LvomsQTyM4QQU.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/gO0LTAIDaEtNK.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "http://i.giphy.com/LaWwAKKraEH7y.gif",
+      "text": "💥🔫"
+    },
+    {
+      "link": "img/approve.gif",
+      "text": "Young Metro trust you 🙏"
+    }
+];
+   var randomIndex = Math.floor(Math.random() * gifs.length);
+   $.backstretch(gifs[randomIndex].link);
 }
 
 $(document).ready(function(){

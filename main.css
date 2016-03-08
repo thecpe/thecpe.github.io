@@ -1,3 +1,7 @@
+html {
+  height: 100%
+}
+
 body {
   /* Location of the image */
   background-image: url(img/doeshe.jpg);
@@ -19,13 +23,18 @@ body {
   /* Set a background color that will be displayed
      while the background image is loading */
   background-color: #894699;
-}
-body { min-height: 100%; margin: 0; display: flex; justify-content: center; align-items: center; }
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+     }
 button {
   border-radius: 50%;
   width: 200px;
   height: 200px;
-    margin-top: 200%;
+    margin-top: 10%;
     position: relative;
   border: none;
   color: white;
@@ -51,4 +60,15 @@ button {
   transform: translateY(4px);
   box-shadow: 0 4px 0 rgb(131, 15, 154),
     0 8px 6px rgba(0,0,0,.45);
+}
+footer {
+
+position: absolute;
+
+left: 0;
+
+right: 0;
+
+bottom: 0;
+
 }
