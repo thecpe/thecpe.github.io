@@ -80,6 +80,10 @@ function onclick() { console.log("Test");
       "text": "💥🔫"
     },
     {
+      "link": "http://i.giphy.com/UAHZijO91QCl2.gif",
+      "text": "💥🔫"
+    },
+    {
       "link": "img/approve.gif",
       "text": "Young Metro trust you 🙏"
     }
