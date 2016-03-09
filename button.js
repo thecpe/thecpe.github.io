@@ -33,7 +33,7 @@ function playSound() {
 }
 dance.addEventListener('click', function(event) { playSound(); });
 
-function onclick() { 
+function onclick() {
   var gifs = [
     {
       "link": "http://i.giphy.com/12MgUpnxEq3ypy.gif",
@@ -90,7 +90,10 @@ function onclick() {
 ];
    var randomIndex = Math.floor(Math.random() * gifs.length);
    $.backstretch(gifs[randomIndex].link);
+
+   document.getElementById('response').innerHTML = gifs[randomIndex].text;
 }
+
 
 $(document).ready(function(){
   $("#everybodydance").click(onclick);
