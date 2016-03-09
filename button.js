@@ -33,7 +33,7 @@ function playSound() {
 }
 dance.addEventListener('click', function(event) { playSound(); });
 
-function onclick() { console.log("Test");
+function onclick() { 
   var gifs = [
     {
       "link": "http://i.giphy.com/12MgUpnxEq3ypy.gif",

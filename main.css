@@ -1,7 +1,16 @@
 html {
   height: 100%
 }
-
+p {
+  font-size: 100px;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  -o-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+}
 body {
   /* Location of the image */
   background-image: url(img/doeshe.jpg);
@@ -27,7 +36,6 @@ body {
       margin: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
       position: relative;
      }
 button {
@@ -35,7 +43,6 @@ button {
   width: 200px;
   height: 200px;
     margin-top: 10%;
-    position: relative;
   border: none;
   color: white;
   font-family: Avenir, Arial, sans-serif;
@@ -49,15 +56,24 @@ button {
   outline: none;
   cursor: pointer;
   text-align: center;
+  left: 50%;
+  position: absolute;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 40px;
   -webkit-user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 
 }
 /*button span { position: relative; }*/
 /* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
+button:hover {
+  background-color: #5f2b6b;
+}
 .pressed {
   padding-top: 3px;
-  transform: translateY(4px);
   box-shadow: 0 4px 0 rgb(131, 15, 154),
     0 8px 6px rgba(0,0,0,.45);
 }
