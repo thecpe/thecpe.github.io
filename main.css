@@ -99,6 +99,22 @@ right: 0;
 bottom: 0;
 
 }
+aside.thecpe {
+    position: absolute;
+    bottom: 55px;
+    left: 60px;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
+    width: 100px;
+  }
+  aside.social {
+    position: absolute;
+    bottom: 55px;
+    right: 60px;
+  }
 
 /* ===================================
    media queries and stuff...
