@@ -20,6 +20,7 @@ p {
   -o-transform: translateY(-50%) translateX(-50%);
   transform: translateY(-50%) translateX(-50%);
   position: absolute;
+  transition: q
 }
 body {
   /* Location of the image */
@@ -80,15 +81,14 @@ button {
 }
 /*button span { position: relative; }*/
 /* fix for IE 11 (and IE8+, although the earlier versions are harder to address) stupidly moving the inner button text on click */
-button:hover {
-  background-color: #5f2b6b;
-}
 .pressed {
   padding-top: 3px;
-  box-shadow: 0 4px 0 rgb(131, 15, 154),
+  box-shadow: 0 4px 0 #894699,
     0 8px 6px rgba(0,0,0,.45);
 }
 footer {
+
+
 
 position: absolute;
 

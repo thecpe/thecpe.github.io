@@ -1,3 +1,64 @@
+/*===================
+Global Variables
+=====================*/
+var gifs = [
+  {
+    "link": "img/0.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/1.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/2.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/3.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/4.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/5.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/6.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/7.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/8.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/9.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/10.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/11.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/approve.gif",
+    "text": "Young Metro trust you 🙏"
+  }
+];
+
+var secondGifs = [];
+var useFirstArray = true;
+
 
 var audio = new Audio('metro.mp3');
 audio.play();
@@ -34,64 +95,38 @@ function playSound() {
 dance.addEventListener('click', function(event) { playSound(); });
 
 function onclick() {
-  var gifs = [
-    {
-      "link": "img/0.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/1.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/2.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/3.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/4.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/5.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/6.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/7.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/8.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/9.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/10.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/11.gif",
-      "text": "💥🔫"
-    },
-    {
-      "link": "img/approve.gif",
-      "text": "Young Metro trust you 🙏"
+    // splice logic
+    if (useFirstArray == true){
+      // Get random index from array
+      var randomIndex = Math.floor(Math.random() * gifs.length);
+      // splice first array
+      var removedArray = gifs.splice(randomIndex, 1);
+      var removedElement = removedArray[0];
+      // pushes removed element from 1st array to the second
+      secondGifs.push(removedElement);
+      // displays the element that was removed as a wallpaper
+     $.backstretch(removedElement.link);
+     document.getElementById('response').innerHTML = removedElement.text;
+     if (gifs.length == 0) {
+       useFirstArray = false;
+     }
     }
-];
-   var randomIndex = Math.floor(Math.random() * gifs.length);
-   $.backstretch(gifs[randomIndex].link);
-
-   document.getElementById('response').innerHTML = gifs[randomIndex].text;
+    //second array splice logic
+    else {
+        // Get random index from second array
+        var randomIndex = Math.floor(Math.random() * secondGifs.length);
+        // splice first second array
+        var removedArray = secondGifs.splice(randomIndex, 1);
+        var removedElement = removedArray[0];
+        // pushes removed element from 1st array to the second
+        gifs.push(removedElement);
+        // displays the element that was removed as a wallpaper
+       $.backstretch(removedElement.link);
+      document.getElementById('response').innerHTML = removedElement.text;
+       if (secondGifs.length == 0) {
+         useFirstArray = true;
+       }
+    }
 }
 
 
