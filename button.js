@@ -36,51 +36,51 @@ dance.addEventListener('click', function(event) { playSound(); });
 function onclick() {
   var gifs = [
     {
-      "link": "http://i.giphy.com/12MgUpnxEq3ypy.gif",
+      "link": "img/0.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/l0O9yF8Mto1mdnogE.gif",
+      "link": "img/1.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/l41m4yUAia33XkNwc.gif",
+      "link": "img/2.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/LhSahsTMJio2A.gif",
+      "link": "img/3.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/xIytx7kHpq74c.gif",
+      "link": "img/4.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/NXWYyKAHim63u.gif",
+      "link": "img/5.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/wP3wOy7woMBDW.gif",
+      "link": "img/6.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/3YNaQqbBw3YJy.gif",
+      "link": "img/7.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/LvomsQTyM4QQU.gif",
+      "link": "img/8.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/gO0LTAIDaEtNK.gif",
+      "link": "img/9.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/LaWwAKKraEH7y.gif",
+      "link": "img/10.gif",
       "text": "💥🔫"
     },
     {
-      "link": "http://i.giphy.com/UAHZijO91QCl2.gif",
+      "link": "img/11.gif",
       "text": "💥🔫"
     },
     {
@@ -89,9 +89,9 @@ function onclick() {
     }
 ];
    var randomIndex = Math.floor(Math.random() * gifs.length);
-   $.backstretch(gifs[12].link);
+   $.backstretch(gifs[randomIndex].link);
 
-   document.getElementById('response').innerHTML = gifs[12].text;
+   document.getElementById('response').innerHTML = gifs[randomIndex].text;
 }
 
 
