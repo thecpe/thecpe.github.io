@@ -89,9 +89,9 @@ function onclick() {
     }
 ];
    var randomIndex = Math.floor(Math.random() * gifs.length);
-   $.backstretch(gifs[randomIndex].link);
+   $.backstretch(gifs[12].link);
 
-   document.getElementById('response').innerHTML = gifs[randomIndex].text;
+   document.getElementById('response').innerHTML = gifs[12].text;
 }
 
 
