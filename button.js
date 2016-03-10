@@ -51,6 +51,42 @@ var gifs = [
     "text": "💥🔫"
   },
   {
+    "link": "img/12.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/13.gif",
+    "text": "Young Metro trust you 🙏"
+  },
+  {
+    "link": "img/14.gif",
+    "text": "Young Metro trust you 🙏"
+  },
+  {
+    "link": "img/15.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/16.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/17.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/18.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/19.gif",
+    "text": "💥🔫"
+  },
+  {
+    "link": "img/20.gif",
+    "text": "💥🔫"
+  },
+  {
     "link": "img/approve.gif",
     "text": "Young Metro trust you 🙏"
   }
