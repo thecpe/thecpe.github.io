@@ -156,7 +156,6 @@ function onclick() {
        }
        $( ".fade-in.one" ).remove();
        var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
-       console.log(htmlString);
        $("#responseContainer").append(htmlString);
       }
       //second array splice logic
