@@ -94,6 +94,7 @@ var gifs = [
 
 var secondGifs = [];
 var useFirstArray = true;
+var buttonPressed = false;
 
 
 var audio = new Audio('metro.mp3');
@@ -106,7 +107,7 @@ if (contextClass) {
   onError;
 }
 var request = new XMLHttpRequest();
-request.open('GET', "http://s3.amazonaws.com/metroaudio/trust.mp3", true);
+request.open('GET', "http://s3.amazonaws.com/metroaudio/trustu.mp3", true);
 request.responseType = 'arraybuffer';
 request.onload = function() {
  context.decodeAudioData(request.response, function(theBuffer) {
@@ -115,9 +116,14 @@ request.onload = function() {
 }
 request.send();
 
-function onError() { console.log("Bad browser! No Web Audio API for you"); }
+function onError() {
+  console.log("Bad browser! No Web Audio API for you");
+}
 
-function unpress() { dance.classList.remove("pressed"); }
+function unpress() {
+  dance.classList.remove("pressed");
+  buttonPressed = false;
+ }
 
 function playSound() {
  dance.classList.add("pressed");
@@ -125,52 +131,55 @@ function playSound() {
   source.buffer = buffer;
  source.connect(context.destination);
   source.start(0);
-  var delay = 2000;
+  var delay = 5000;
   setTimeout(unpress,delay);
 }
-dance.addEventListener('click', function(event) { playSound(); });
 
 function onclick() {
-    // splice logic
-    if (useFirstArray == true){
-      // Get random index from array
-      var randomIndex = Math.floor(Math.random() * gifs.length);
-      // splice first array
-      var removedArray = gifs.splice(randomIndex, 1);
-      var removedElement = removedArray[0];
-      // pushes removed element from 1st array to the second
-      secondGifs.push(removedElement);
-      // displays the element that was removed as a wallpaper
-     $.backstretch(removedElement.link);
-     // document.getElementById('response').innerHTML = removedElement.text;
-     if (gifs.length == 0) {
-       useFirstArray = false;
-     }
-     $( ".fade-in.one" ).remove();
-     var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
-     console.log(htmlString);
-     $("#responseContainer").append(htmlString);
-    }
-    //second array splice logic
-    else {
-        // Get random index from second array
-        var randomIndex = Math.floor(Math.random() * secondGifs.length);
-        // splice first second array
-        var removedArray = secondGifs.splice(randomIndex, 1);
+    if (buttonPressed == false) {
+      buttonPressed = true;
+      playSound();
+      // splice logic
+      if (useFirstArray == true){
+        // Get random index from array
+        var randomIndex = Math.floor(Math.random() * gifs.length);
+        // splice first array
+        var removedArray = gifs.splice(randomIndex, 1);
         var removedElement = removedArray[0];
         // pushes removed element from 1st array to the second
-        gifs.push(removedElement);
+        secondGifs.push(removedElement);
         // displays the element that was removed as a wallpaper
        $.backstretch(removedElement.link);
-      //document.getElementById('response').innerHTML = removedElement.text;
-       if (secondGifs.length == 0) {
-         useFirstArray = true;
+       // document.getElementById('response').innerHTML = removedElement.text;
+       if (gifs.length == 0) {
+         useFirstArray = false;
        }
        $( ".fade-in.one" ).remove();
        var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
        console.log(htmlString);
        $("#responseContainer").append(htmlString);
-    }
+      }
+      //second array splice logic
+      else {
+          // Get random index from second array
+          var randomIndex = Math.floor(Math.random() * secondGifs.length);
+          // splice first second array
+          var removedArray = secondGifs.splice(randomIndex, 1);
+          var removedElement = removedArray[0];
+          // pushes removed element from 1st array to the second
+          gifs.push(removedElement);
+          // displays the element that was removed as a wallpaper
+         $.backstretch(removedElement.link);
+        //document.getElementById('response').innerHTML = removedElement.text;
+         if (secondGifs.length == 0) {
+           useFirstArray = true;
+         }
+         $( ".fade-in.one" ).remove();
+         var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
+         console.log(htmlString);
+         $("#responseContainer").append(htmlString);
+      }
+  }
 }
 
 
