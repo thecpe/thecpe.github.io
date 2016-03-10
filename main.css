@@ -177,4 +177,12 @@ a:active {
        height: 75px;
        text-align: center;
    }
+
+   p {
+     font-size: 500%;
+   }
+
+   .aside.thecpe {
+     font-size: 300%;
+   }
 }
