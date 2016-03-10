@@ -44,9 +44,9 @@ p {
 }
 
 .fade-in.one {
--webkit-animation-delay: 0.7s;
--moz-animation-delay: 0.7s;
-animation-delay: 0.7s;
+-webkit-animation-delay: 0.1s;
+-moz-animation-delay: 0.1s;
+animation-delay: 0.1s;
 }
 
 
@@ -135,9 +135,10 @@ aside.thecpe {
     color: white;
     text-transform: uppercase;
     font-size: 20px;
+    font-weight: 1000px;
     letter-spacing: 3px;
     font-family: sans-serif;
-    color: purple;
+    color: #1B95E0;
     font-weight: bold;
   }
   aside.social {
@@ -147,22 +148,22 @@ aside.thecpe {
   }
   /* unvisited link */
 a:link {
-    color: purple;
+    color: #1B95E0;
 }
 
 /* visited link */
 a:visited {
-    color: purple;
+    color: #1B95E0;
 }
 
 /* mouse over link */
 a:hover {
-    color: purple;
+    color: #1B95E0;
 }
 
 /* selected link */
 a:active {
-    color: purple;
+    color: #1B95E0;
 }
 
 /* ===================================

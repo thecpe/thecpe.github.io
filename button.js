@@ -142,10 +142,14 @@ function onclick() {
       secondGifs.push(removedElement);
       // displays the element that was removed as a wallpaper
      $.backstretch(removedElement.link);
-     document.getElementById('response').innerHTML = removedElement.text;
+     // document.getElementById('response').innerHTML = removedElement.text;
      if (gifs.length == 0) {
        useFirstArray = false;
      }
+     $( ".fade-in.one" ).remove();
+     var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
+     console.log(htmlString);
+     $("#responseContainer").append(htmlString);
     }
     //second array splice logic
     else {
@@ -158,10 +162,14 @@ function onclick() {
         gifs.push(removedElement);
         // displays the element that was removed as a wallpaper
        $.backstretch(removedElement.link);
-      document.getElementById('response').innerHTML = removedElement.text;
+      //document.getElementById('response').innerHTML = removedElement.text;
        if (secondGifs.length == 0) {
          useFirstArray = true;
        }
+       $( ".fade-in.one" ).remove();
+       var htmlString = "<span class='box fade-in one'>" + removedElement.text + "</span>";
+       console.log(htmlString);
+       $("#responseContainer").append(htmlString);
     }
 }
 
