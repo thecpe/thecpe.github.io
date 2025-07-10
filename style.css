@@ -1,0 +1,58 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: #C8C8C8;
+  font-family: "Indie Flower", cursive;
+}
+
+h1 {
+  text-align: left;
+  font-style: Bold;
+  color: #black;
+  font-family: "Gloria Hallelujah", cursive;
+}
+
+p {
+  font-family: "Indie Flower", cursive;
+}
+
+p.center {
+  text-align: left;
+}
+
+.page-wrap {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.center {
+  margin: auto;
+  width: 75%;
+/*   border: 2px solid black; */
+  border-radius: 10px;
+  padding: 20px;
+  
+}
+
+.footer {
+  width: 100%;
+  color: black;
+  padding-right: 25px;
+  text-align: left;
+/*   background-color: blue; */
+}
+
+a:link {
+  text-decoration: none;
+  color: green;
+}
+
+a:visited {
+  color: green;
+}
+
+a:hover {
+  color: black;
+}
