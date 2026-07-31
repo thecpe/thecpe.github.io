@@ -1,7 +1,6 @@
 /* CSS files add styling rules to your content */
 
 body {
-  font-family: helvetica, arial, sans-serif;
   margin: 2em;
   background-color: #C8C8C8;
   font-family: "Indie Flower", cursive;
@@ -9,39 +8,131 @@ body {
 
 h1 {
   text-align: left;
-  font-style: Bold;
-  color: #black;
+  color: black;
   font-family: "Gloria Hallelujah", cursive;
+  margin: 0.3em 0 0.2em;
 }
 
 p {
   font-family: "Indie Flower", cursive;
-}
-
-p.center {
-  text-align: left;
-}
-
-.page-wrap {
-  width: 800px;
-  margin: 0 auto;
+  font-size: 1.15em;
+  line-height: 1.6;
+  margin: 0.85em 0;
 }
 
 .center {
   margin: auto;
   width: 75%;
-/*   border: 2px solid black; */
+  max-width: 34em;
   border-radius: 10px;
   padding: 20px;
-  
 }
 
 .footer {
   width: 100%;
   color: black;
-  padding-right: 25px;
   text-align: left;
-/*   background-color: blue; */
+}
+
+.butterfly {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+  cursor: pointer;
+  transition: opacity 0.6s;
+  will-change: transform;
+}
+
+/* the waterfall, drawn by hand. it flows while it plays. */
+.waterfall {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  background: transparent;
+  border: none;
+  padding: 4px 8px;
+  margin: 2px 0 6px;
+  cursor: pointer;
+  font-family: "Indie Flower", cursive;
+  color: green;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.falls {
+  width: 170px;
+  height: 100px;
+}
+
+.falls path,
+.falls circle {
+  fill: none;
+  stroke: green;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.stream {
+  stroke-dasharray: 6 7;
+}
+
+.rock {
+  stroke-width: 1.5;
+}
+
+.splash {
+  stroke-width: 1.5;
+  opacity: 0;
+}
+
+.waterfall[aria-pressed="true"] .splash {
+  opacity: 1;
+  animation: mist 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes mist {
+  from {
+    opacity: 0.25;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.waterfall[aria-pressed="true"] .stream {
+  animation: fall 1s linear infinite;
+}
+
+.waterfall[aria-pressed="true"] .s2 { animation-duration: 0.85s; }
+.waterfall[aria-pressed="true"] .s3 { animation-duration: 1.15s; }
+.waterfall[aria-pressed="true"] .s4 { animation-duration: 0.95s; }
+.waterfall[aria-pressed="true"] .s5 { animation-duration: 1.05s; }
+
+@keyframes fall {
+  to {
+    stroke-dashoffset: -13;
+  }
+}
+
+.waterfall-label {
+  font-size: 1.15em;
+}
+
+.waterfall:hover .waterfall-label,
+.waterfall:focus-visible .waterfall-label {
+  color: black;
+}
+
+.waterfall:hover .falls path,
+.waterfall:focus-visible .falls path {
+  stroke: black;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .waterfall[aria-pressed="true"] .stream {
+    animation: none;
+  }
 }
 
 a:link {

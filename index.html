@@ -1,27 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-166718857-1"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "UA-166718857-1");
-    </script>
     <title>Yatu</title>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Personal site of Yatú. A butterfly, a waterfall, and some notions."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦋</text></svg>"
+    />
 
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/style.css?v=2" />
 
     <!-- import the webpage's javascript file -->
     <script src="/script.js" defer></script>
@@ -31,226 +24,304 @@
     />
   </head>
 
-  <div class="center">
-    <body>
+  <body>
+    <div class="center">
       <h1>Yatu</h1>
-      <audio controls autoplay>
-        <source
-          src="https://cdn.glitch.com/24858081-d411-42d2-b8f8-591ebfe2c850%2Frainforesty.m4a?v=1591727150609"
-          type="audio/mpeg"
-        />
+      <audio id="waterfall" loop preload="auto">
+        <source src="/assets/rainforesty.m4a" type="audio/mp4" />
       </audio>
+      <button
+        id="waterfall-toggle"
+        class="waterfall"
+        aria-pressed="false"
+        aria-label="play the waterfall"
+      >
+        <svg class="falls" viewBox="0 0 170 100" aria-hidden="true">
+          <path class="ledge" d="M8 26 Q 26 21 44 25 Q 54 26 60 26" />
+          <path class="edge" d="M60 26 q 3 16 -2 30 q -2 12 1 22" />
+          <path class="edge" d="M100 26 q -3 16 2 30 q 2 12 -1 22" />
+          <path class="ledge" d="M100 26 Q 112 24 124 27" />
+          <path class="cliff" d="M124 27 q 5 15 -1 29 q -5 14 2 26" />
+          <path class="rock" d="M120 45 l 7 -3" />
+          <path class="rock" d="M119 62 l 7 -3" />
+          <path class="stream" d="M70 27 q 2 13 -1 25 q -2 13 1 24" />
+          <path class="stream s2" d="M80 27 q -2 13 1 25 q 2 13 -1 24" />
+          <path class="stream s3" d="M90 27 q 2 13 -2 25 q -2 13 2 24" />
+          <path class="pool" d="M28 84 q 8 -5 16 0" />
+          <path class="pool" d="M48 88 q 8 -5 16 0" />
+          <path class="pool" d="M68 84 q 8 -5 16 0" />
+          <path class="pool" d="M88 88 q 8 -5 16 0" />
+          <path class="pool" d="M108 84 q 8 -5 16 0" />
+          <path class="splash" d="M54 76 q -2 -5 -6 -7" />
+          <path class="splash" d="M106 76 q 2 -5 6 -7" />
+          <circle class="splash bubble" cx="60" cy="82" r="1.6" />
+          <circle class="splash bubble" cx="100" cy="82" r="1.6" />
+        </svg>
+        <span class="waterfall-label">play the waterfall</span>
+      </button>
       <p>
-        Welcome, I enjoy putting energy towards
+        hi, i'm yatú. i put my energy into
         <a href="https://tealprocess.net/" target="_blank"
-          >Teal Process & Company.</a
-        >
-      </P>
+          >Teal Process & Company</a
+        >.
+      </p>
       <p>
-        Here are my
-        <a href="https://www.are.na/yatu/notions" target="_blank">notions</a>,
-        some
+        on <a href="https://www.are.na/yatu" target="_blank">are.na</a>:
+        <a href="https://www.are.na/yatu/notions" target="_blank">notions</a> ·
         <a href="https://www.are.na/yatu/captured-all-channels" target="_blank"
           >captured moments</a
         >
-        as well as
+        ·
         <a href="https://www.are.na/yatu/testimonies" target="_blank"
-          >testomines from people</a
+          >testimonies</a
         >
+      </p>
+      <p>
+        brand or hardware:
+        <a href="mailto:whosyatu@gmail.com">whosyatu@gmail.com</a>
+      </p>
+      <p>
+        the butterflies land on the words sometimes. a click and they're gone.
+        the waterfall plays when you ask.
       </p>
       <div class="footer">
         <p>
-          <a href="https://www.are.na/yatu" target="_blank">Are.na</a> -
-          <a href="https://twitter.com/thecpe" target="_blank">Twitter</a> -
-          <a href="https://www.instagram.com/thecpe/" target="_blank">Gram</a> -
+          <a href="https://twitter.com/thecpe" target="_blank">Twitter</a> ·
+          <a href="https://www.instagram.com/thecpe/" target="_blank">Gram</a> ·
           <a href="https://www.instagram.com/pourandspill/" target="_blank"
             >Finsta</a
           >
-          - WhosYatu@gmail.com
         </p>
       </div>
-      <script language="JavaScript1.2">
-        /*
-Flying Butterfly script (By BGAudioDr@aol.com)
-Modified slightly/ permission granted to Dynamic Drive to feature script in archive
-For full source, visit http://www.dynamicdrive.com
-*/
+    </div>
 
-        var Ymax = 8; //MAX # OF PIXEL STEPS IN THE "X" DIRECTION
-        var Xmax = 8; //MAX # OF PIXEL STEPS IN THE "Y" DIRECTION
-        var Tmax = 10000; //MAX # OF MILLISECONDS BETWEEN PARAMETER CHANGES
+    <script>
+      // The waterfall. Browsers only allow sound after you ask for it,
+      // so the button is how you ask. We still try once on arrival for
+      // browsers that remember this site fondly.
+      (function () {
+        var audio = document.getElementById("waterfall");
+        var button = document.getElementById("waterfall-toggle");
+        var label = button.querySelector(".waterfall-label");
 
-        //FLOATING IMAGE URLS FOR EACH IMAGE. ADD OR DELETE ENTRIES. KEEP ELEMENT NUMERICAL ORDER STARTING WITH "0" !!
-
-        var floatimages = new Array();
-        floatimages[0] =
-          "https://cdn.glitch.com/24858081-d411-42d2-b8f8-591ebfe2c850%2Fbutterfly2.gif?v=1587497787718";
-        floatimages[1] =
-          "https://cdn.glitch.com/24858081-d411-42d2-b8f8-591ebfe2c850%2Fbutterfly2.gif?v=1587497787718";
-
-        //*********DO NOT EDIT BELOW***********
-        var NS4 =
-          navigator.appName.indexOf("Netscape") >= 0 &&
-          parseFloat(navigator.appVersion) >= 4 &&
-          parseFloat(navigator.appVersion) < 5
-            ? true
-            : false;
-        var IE4 = document.all ? true : false;
-        var NS6 =
-          parseFloat(navigator.appVersion) >= 5 &&
-          navigator.appName.indexOf("Netscape") >= 0
-            ? true
-            : false;
-        var wind_w,
-          wind_h,
-          t = "",
-          IDs = new Array();
-        for (i = 0; i < floatimages.length; i++) {
-          t += NS4
-            ? '<layer name="pic' +
-              i +
-              '" visibility="hide" width="10" height="10"><a href="javascript:hidebutterfly()">'
-            : '<div id="pic' +
-              i +
-              '" style="position:absolute; visibility:hidden;width:10px; height:10px; z-index:1000"><a href="javascript:hidebutterfly()">';
-          t +=
-            '<img src="' + floatimages[i] + '" name="p' + i + '" border="0">';
-          t += NS4 ? "</a></layer>" : "</a></div>";
-        }
-        document.write(t);
-
-        function moveimage(num) {
-          if (
-            getidleft(num) + IDs[num].W + IDs[num].Xstep >=
-            wind_w + getscrollx()
-          )
-            IDs[num].Xdir = false;
-          if (getidleft(num) - IDs[num].Xstep <= getscrollx())
-            IDs[num].Xdir = true;
-          if (
-            getidtop(num) + IDs[num].H + IDs[num].Ystep >=
-            wind_h + getscrolly()
-          )
-            IDs[num].Ydir = false;
-          if (getidtop(num) - IDs[num].Ystep <= getscrolly())
-            IDs[num].Ydir = true;
-          moveidby(
-            num,
-            IDs[num].Xdir ? IDs[num].Xstep : -IDs[num].Xstep,
-            IDs[num].Ydir ? IDs[num].Ystep : -IDs[num].Ystep
-          );
+        function show(playing) {
+          var words = playing ? "hush the waterfall" : "play the waterfall";
+          label.textContent = words;
+          button.setAttribute("aria-pressed", playing ? "true" : "false");
+          button.setAttribute("aria-label", words);
         }
 
-        function getnewprops(num) {
-          IDs[num].Ydir = Math.floor(Math.random() * 2) > 0;
-          IDs[num].Xdir = Math.floor(Math.random() * 2) > 0;
-          IDs[num].Ystep = Math.ceil(Math.random() * Ymax);
-          IDs[num].Xstep = Math.ceil(Math.random() * Xmax);
-          setTimeout(
-            "getnewprops(" + num + ")",
-            Math.floor(Math.random() * Tmax)
-          );
-        }
-
-        function getscrollx() {
-          if (NS4 || NS6) return window.pageXOffset;
-          if (IE4) return document.body.scrollLeft;
-        }
-
-        function getscrolly() {
-          if (NS4 || NS6) return window.pageYOffset;
-          if (IE4) return document.body.scrollTop;
-        }
-
-        function getid(name) {
-          if (NS4) return document.layers[name];
-          if (IE4) return document.all[name];
-          if (NS6) return document.getElementById(name);
-        }
-
-        function moveidto(num, x, y) {
-          if (NS4) IDs[num].moveTo(x, y);
-          if (IE4 || NS6) {
-            IDs[num].style.left = x + "px";
-            IDs[num].style.top = y + "px";
-          }
-        }
-
-        function getidleft(num) {
-          if (NS4) return IDs[num].left;
-          if (IE4 || NS6) return parseInt(IDs[num].style.left);
-        }
-
-        function getidtop(num) {
-          if (NS4) return IDs[num].top;
-          if (IE4 || NS6) return parseInt(IDs[num].style.top);
-        }
-
-        function moveidby(num, dx, dy) {
-          if (NS4) IDs[num].moveBy(dx, dy);
-          if (IE4 || NS6) {
-            IDs[num].style.left = getidleft(num) + dx + "px";
-            IDs[num].style.top = getidtop(num) + dy + "px";
-          }
-        }
-
-        function getwindowwidth() {
-          if (NS4 || NS6) return window.innerWidth;
-          if (IE4) return document.body.clientWidth;
-        }
-
-        function getwindowheight() {
-          if (NS4 || NS6) return window.innerHeight;
-          if (IE4) return document.body.clientHeight;
-        }
-
-        function init() {
-          wind_w = getwindowwidth();
-          wind_h = getwindowheight();
-          for (i = 0; i < floatimages.length; i++) {
-            IDs[i] = getid("pic" + i);
-            if (NS4) {
-              IDs[i].W = IDs[i].document.images["p" + i].width;
-              IDs[i].H = IDs[i].document.images["p" + i].height;
-            }
-            if (NS6 || IE4) {
-              IDs[i].W = document.images["p" + i].width;
-              IDs[i].H = document.images["p" + i].height;
-            }
-            getnewprops(i);
-            moveidto(
-              i,
-              Math.floor(Math.random() * (wind_w - IDs[i].W)),
-              Math.floor(Math.random() * (wind_h - IDs[i].H))
+        button.addEventListener("click", function () {
+          if (audio.paused) {
+            audio.play().then(
+              function () {
+                show(true);
+              },
+              function () {
+                show(false);
+              }
             );
-            if (NS4) IDs[i].visibility = "show";
-            if (IE4 || NS6) IDs[i].style.visibility = "visible";
-            startfly = setInterval(
-              "moveimage(" + i + ")",
-              Math.floor(Math.random() * 100) + 100
-            );
+          } else {
+            audio.pause();
+            show(false);
           }
-        }
+        });
 
-        function hidebutterfly() {
-          for (i = 0; i < floatimages.length; i++) {
-            if (IE4)
-              eval("document.all.pic" + i + ".style.visibility='hidden'");
-            else if (NS6)
-              document.getElementById("pic" + i).style.visibility = "hidden";
-            else if (NS4) eval("document.pic" + i + ".visibility='hide'");
-            clearInterval(startfly);
+        audio.play().then(
+          function () {
+            show(true);
+          },
+          function () {
+            show(false);
           }
-        }
+        );
+      })();
+    </script>
 
-        if (NS4 || NS6 || IE4) {
-          window.onload = init;
-          window.onresize = function() {
-            wind_w = getwindowwidth();
-            wind_h = getwindowheight();
+    <script>
+      /*
+        Flying butterflies. Descended from the 1998 Dynamic Drive
+        "Flying Butterfly" script this site ran since its Glitch days.
+        These ones have manners: they drift away from your cursor
+        (gently, they can still be caught), they perch on parts of the
+        page to rest a while, and a click lets one retire for the day.
+      */
+      (function () {
+        var BUTTERFLIES = 2;
+        if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+        var mouse = { x: -9999, y: -9999 };
+        addEventListener("mousemove", function (e) {
+          mouse.x = e.clientX;
+          mouse.y = e.clientY;
+        });
+
+        var PERCH_SPOTS = "h1, p a";
+        var EVADE_RADIUS = 80; // px: how close before it minds you
+        var EVADE_PUSH = 1.5; // px/frame: shy, but easily caught
+        var SCARE_RADIUS = 45; // px: how close wakes a resting one
+
+        function spawn(index) {
+          var el = document.createElement("img");
+          el.src = "/assets/butterfly2.gif";
+          el.alt = "a fluttering butterfly";
+          el.title = "a click and i'm gone";
+          el.className = "butterfly";
+          document.body.appendChild(el);
+
+          var s = {
+            mode: "wander", // wander | approach | rest
+            x: Math.random() * Math.max(1, innerWidth - 80),
+            y: Math.random() * Math.max(1, innerHeight - 60),
+            vx: 0,
+            vy: 0,
+            hx: 1,
+            hy: 1,
+            sx: 2,
+            sy: 2,
+            wobble: Math.random() * 6.28,
+            target: null,
+            nextThink: 0,
+            restUntil: 0,
+            nextPerchAt: performance.now() + 3000 + Math.random() * 5000,
+            lastFrame: performance.now(),
+            gone: false,
           };
+
+          function think(now) {
+            s.hx = Math.random() < 0.5 ? -1 : 1;
+            s.hy = Math.random() < 0.5 ? -1 : 1;
+            s.sx = 0.25 + Math.random() * 0.85;
+            s.sy = 0.2 + Math.random() * 0.7;
+            s.nextThink = now + 800 + Math.random() * 4000;
+          }
+
+          function pickPerch() {
+            var spots = document.querySelectorAll(PERCH_SPOTS);
+            if (!spots.length) return null;
+            var t = spots[Math.floor(Math.random() * spots.length)];
+            var r = t.getBoundingClientRect();
+            if (r.width === 0 || r.top < 0 || r.bottom > innerHeight)
+              return null;
+            var w = el.width || 72;
+            var h = el.height || 51;
+            return {
+              x: Math.max(
+                0,
+                Math.min(
+                  innerWidth - w,
+                  r.left + r.width * (0.2 + Math.random() * 0.6) - w / 2
+                )
+              ),
+              y: Math.max(0, r.top - h + 8),
+            };
+          }
+
+          function distToMouse(w, h) {
+            return Math.hypot(
+              s.x + w / 2 - mouse.x,
+              s.y + h / 2 - mouse.y
+            );
+          }
+
+          function frame(now) {
+            if (s.gone) return;
+            var w = el.width || 72;
+            var h = el.height || 51;
+            // scale movement by real elapsed time so speed matches on
+            // 60Hz, 120Hz, and throttled displays alike
+            var dt = Math.min(now - s.lastFrame, 50) / 16.67;
+            s.lastFrame = now;
+
+            if (s.mode === "wander") {
+              if (now >= s.nextThink) think(now);
+              var tx = s.hx * s.sx;
+              var ty = s.hy * s.sy;
+
+              // ease away from a nearby cursor
+              var dx = s.x + w / 2 - mouse.x;
+              var dy = s.y + h / 2 - mouse.y;
+              var d = Math.hypot(dx, dy);
+              if (d < EVADE_RADIUS && d > 0.001) {
+                var push = (1 - d / EVADE_RADIUS) * EVADE_PUSH;
+                tx += (dx / d) * push;
+                ty += (dy / d) * push;
+              }
+
+              // smooth the turn so evasion looks like a decision
+              s.vx = s.vx * 0.86 + tx * 0.14;
+              s.vy = s.vy * 0.86 + ty * 0.14;
+
+              s.wobble += 0.11 * dt;
+              s.x += s.vx * dt;
+              s.y += (s.vy + Math.sin(s.wobble) * 0.5) * dt;
+
+              if (s.x <= 0) s.hx = 1;
+              if (s.x + w >= innerWidth) s.hx = -1;
+              if (s.y <= 0) s.hy = 1;
+              if (s.y + h >= innerHeight) s.hy = -1;
+
+              // now and then, go rest somewhere
+              if (now >= s.nextPerchAt && d > EVADE_RADIUS) {
+                var p = pickPerch();
+                if (p) {
+                  s.mode = "approach";
+                  s.target = p;
+                } else {
+                  s.nextPerchAt = now + 8000;
+                }
+              }
+            } else if (s.mode === "approach") {
+              var ax = s.target.x - s.x;
+              var ay = s.target.y - s.y;
+              var ad = Math.hypot(ax, ay);
+              var speed = Math.min(1.6, ad * 0.02 + 0.5) * dt;
+              if (ad <= Math.max(2.5, speed)) {
+                s.x = s.target.x;
+                s.y = s.target.y;
+                s.vx = 0;
+                s.vy = 0;
+                s.mode = "rest";
+                s.restUntil = now + 9000 + Math.random() * 13000;
+              } else {
+                s.wobble += 0.09 * dt;
+                s.x += (ax / ad) * speed;
+                s.y += (ay / ad) * speed + Math.sin(s.wobble) * 0.4 * dt;
+              }
+              if (distToMouse(w, h) < SCARE_RADIUS) {
+                s.mode = "wander";
+                think(now);
+                s.nextPerchAt = now + 6000 + Math.random() * 8000;
+              }
+            } else if (s.mode === "rest") {
+              if (now >= s.restUntil || distToMouse(w, h) < SCARE_RADIUS) {
+                s.mode = "wander";
+                think(now);
+                s.nextPerchAt = now + 9000 + Math.random() * 14000;
+              }
+            }
+
+            s.x = Math.max(0, Math.min(innerWidth - w, s.x));
+            s.y = Math.max(0, Math.min(innerHeight - h, s.y));
+            el.style.transform =
+              "translate(" + s.x + "px," + s.y + "px)";
+            requestAnimationFrame(frame);
+          }
+
+          el.addEventListener("click", function () {
+            s.gone = true;
+            el.style.opacity = "0";
+            setTimeout(function () {
+              el.remove();
+            }, 600);
+          });
+
+          think(performance.now());
+          requestAnimationFrame(frame);
         }
-      </script>
-    </body>
-  </div>
+
+        for (var i = 0; i < BUTTERFLIES; i++) spawn(i);
+      })();
+    </script>
+  </body>
 </html>
