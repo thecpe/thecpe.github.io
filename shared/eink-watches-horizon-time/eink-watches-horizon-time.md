@@ -24,6 +24,22 @@ Horizon Time watch face (sun-arc / sunrise–sunset rendering) on an always-on e
 - Community firmware [qpaperOS](https://github.com/qewer33/qpaperOS) + free 3D-printed case designs on Printables
 - Good for testing the Horizon Time rendering cheaply before committing to nicer hardware
 
+## Circular options
+
+Round e-ink is rare — **Pebble Round 2 is effectively the only circular programmable
+e-paper watch on the market** (updated 2026-08-14):
+
+- **$199, pre-order, ships September 2026** at [repebble.com/watch](https://repebble.com/watch)
+- 1.3" **round 64-color e-paper touchscreen**, 260×260 at 283 DPI, bezel much thinner than the 2016 original ([androidauthority hands-on](https://www.androidauthority.com/pebble-round-2-hands-on-ces-2026-3629613/), [specs](https://gadgetsandwearables.com/technical-specs/pebble-round-2/))
+- 41.5 mm × 8.1 mm, 316 stainless steel; Matte Black / Brushed Silver / Polished Rose Gold
+- 10–14 day battery, 3 ATM, accelerometer, compass, dual mics, LED backlight
+- Same fully open-source PebbleOS + SDK as the Time 2 — a Horizon Time face ports directly
+- A round dial is arguably the *best* canvas for Horizon Time: the sun arc maps naturally onto a circular face (same instinct as the paragonday-calendar sun-dial explorations)
+
+DIY round e-ink is a dead end for now: round e-paper modules are essentially not sold
+(Waveshare's round modules are LCD, e.g. the 1.28" GC9A01 — [waveshare.com](https://www.waveshare.com/product/displays/e-paper/epaper-1.htm)), so there's no
+Watchy-style circular build path.
+
 ## Fit with Horizon Time
 
 - E-ink is ideal for Horizon Time: always-on, updates once a minute, and the sun-arc only
