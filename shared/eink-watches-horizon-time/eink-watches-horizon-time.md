@@ -36,6 +36,17 @@ e-paper watch on the market** (updated 2026-08-14):
 - Same fully open-source PebbleOS + SDK as the Time 2 — a Horizon Time face ports directly
 - A round dial is arguably the *best* canvas for Horizon Time: the sun arc maps naturally onto a circular face (same instinct as the paragonday-calendar sun-dial explorations)
 
+### Hackability: yes, first-class — no jailbreak needed
+
+Custom watchfaces are the *intended* use, not a hack. The Round 2 is platform
+`gabbro` in the official Pebble SDK: write faces in C or pure JavaScript, test in the
+emulator (`pebble install emulator --gabbro`) or in the browser via the revived
+[CloudPebble](https://repebble.com/blog/cloudpebble-returns-plus-pure-javascript-and-round-2-sdk),
+then sideload or publish to the Pebble Appstore ([watchface tutorial](https://developer.repebble.com/tutorials/watchface-tutorial/part1/)).
+Sunrise/sunset/location data flows in via the PebbleKit JS companion on the phone.
+The community has already shipped 2,120+ apps/faces for the Time 2 and Round 2.
+**We can build and demo the Horizon Time face in the emulator today, before hardware ships in September.**
+
 DIY round e-ink is a dead end for now: round e-paper modules are essentially not sold
 (Waveshare's round modules are LCD, e.g. the 1.28" GC9A01 — [waveshare.com](https://www.waveshare.com/product/displays/e-paper/epaper-1.htm)), so there's no
 Watchy-style circular build path.
