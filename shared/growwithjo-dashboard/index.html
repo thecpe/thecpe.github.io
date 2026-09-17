@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>growwithjo Member Dashboard</title>
+<style>
+  @page { size: A4; margin: 22mm 20mm; }
+  @media screen {
+    body { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; font-size: 16px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 22px; }
+    h3 { font-size: 17px; }
+    .kicker { font-size: 12px; }
+    .subtitle, .meta { font-size: 15px; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #1a1d21; font-size: 10.5pt; line-height: 1.6; margin: 0;
+  }
+  .kicker {
+    font-size: 8.5pt; letter-spacing: 0.22em; text-transform: uppercase;
+    color: #b7791f; font-weight: 600; margin-bottom: 10px;
+  }
+  h1 {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 23pt; line-height: 1.2; font-weight: 600; margin: 0 0 6px;
+  }
+  .subtitle { color: #5c6470; font-size: 10.5pt; margin: 0 0 4px; }
+  .rule { border: none; border-top: 2.5px solid #1a1d21; margin: 18px 0 22px; }
+  h2 {
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size: 14pt; font-weight: 600; margin: 26px 0 8px;
+    page-break-after: avoid;
+  }
+  h3 { font-size: 11pt; margin: 18px 0 6px; page-break-after: avoid; }
+  ul, ol { margin: 6px 0; padding-left: 20px; }
+  li { margin: 3px 0; }
+  a { color: #1a5fb4; text-decoration: none; }
+  .meta { color: #5c6470; font-size: 9pt; }
+  code {
+    font-family: "SF Mono", Menlo, monospace; font-size: 9pt;
+    background: #f4f5f7; border-radius: 3px; padding: 1px 4px;
+  }
+  blockquote {
+    margin: 14px 0; padding: 12px 18px; border-left: 3px solid #b7791f;
+    background: #fdfaf4; color: #35393f; font-size: 11pt; line-height: 1.55;
+    page-break-inside: avoid;
+  }
+  blockquote p { margin: 0; }
+  table {
+    border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 9.5pt;
+    page-break-inside: avoid;
+  }
+  th {
+    text-align: left; font-size: 8pt; letter-spacing: 0.1em; text-transform: uppercase;
+    color: #5c6470; border-bottom: 1.5px solid #1a1d21; padding: 6px 10px 5px;
+  }
+  td { border-bottom: 1px solid #e2e5ea; padding: 7px 10px; vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  hr { border: none; border-top: 1px solid #e2e5ea; margin: 22px 0; }
+  .footer {
+    margin-top: 30px; padding-top: 10px; border-top: 1px solid #e2e5ea;
+    font-size: 8.5pt; color: #8a919c; display: flex; justify-content: space-between;
+  }
+</style>
+</head>
+<body>
+
+<div class="kicker">Research Brief</div>
+<h1>growwithjo Member Dashboard</h1>
+<p class="subtitle">Ideas & approaches for a dashboard the Homies will actually use</p>
+<p class="meta">Prepared for becs · September 17, 2026</p>
+<hr class="rule">
+<p class="meta">Download: <a href="growwithjo-member-dashboard.pdf">PDF</a> · <a href="GROWWITHJO_MEMBER_DASHBOARD_IDEAS.md" download>Markdown</a></p>
+
+<p><strong>Date:</strong> 2026-09-17 · <strong>For:</strong> becs (runs growwithjo community) · <strong>From:</strong> Fizz
+<strong>Status:</strong> Brainstorm only — nothing gets built until becs picks a direction.</p>
+<h2>What growwithjo is (research)</h2>
+<ul>
+<li>Women-focused home-workout membership, ~13,000+ members ("Homies")</li>
+<li>Platform: Uscreen (app id <code>tv.uscreen.growwithjo</code> — iOS/Android/TV apps + web)</li>
+<li>Content: 800+ on-demand workouts (walking, HIIT, tabata, pilates, strength), 20–30 min, beginner/postpartum-friendly</li>
+<li>Extras: "Done With Diets" nutrition course, custom meal maps, live group calls with Jo, streak tracking + progress logs</li>
+<li>Pricing: ~$198.99/yr annual, monthly option; membership managed from account dashboard</li>
+</ul>
+<p>Sources: <a href="https://growwithjo.com/">growwithjo.com</a>, <a href="https://growwithjo.com/pages/membership">membership page</a>, <a href="https://play.google.com/store/apps/details?id=tv.uscreen.growwithjo&amp;hl=en_US">Google Play listing</a>, <a href="https://apps.apple.com/us/app/growwithjo-home-workouts/id6477621228">App Store listing</a></p>
+<h2>First: which "dashboard"?</h2>
+<p>Three different products hide inside the word — becs should pick one to start:</p>
+<p><strong>A. Member home screen</strong> — each Homie opens it and sees <em>her own</em> week: streak, workouts done, today's suggested workout, next live call, current milestone. Value = personal momentum. This is what most members would call "valuable."</p>
+<p><strong>B. Community pulse board</strong> — collective stats: total workouts this week, challenge leaderboard, shout-outs, milestones wall ("Sarah hit 100 workouts!"). Value = accountability + belonging, which is growwithjo's whole brand.</p>
+<p><strong>C. Ops dashboard for becs/Jo</strong> — engagement, retention, at-risk members (streak just broke, no login 14 days), challenge participation. Not member-facing, but often the highest-leverage first build because it tells you what members actually do.</p>
+<h2>Three approaches (any of the above)</h2>
+<h3>1. Squeeze Uscreen first (lowest lift)</h3>
+<p>Uscreen already tracks watch history, streaks, and progress, and has an API + webhooks + Zapier. Before building anything: audit what Uscreen's member area and analytics already show, and what's just turned off or unstyled. Maybe 60% of the dream dashboard is a settings/config exercise.
+<strong>Good when:</strong> becs wants value in days, not months. <strong>Limit:</strong> stuck with Uscreen's layout.</p>
+<h3>2. Manual-first pilot (validate before building)</h3>
+<p>A weekly "Homie Scoreboard" — becs (with agent help) exports Uscreen data weekly, and we generate a styled page/email: community totals, streak stars, challenge standings. Zero software to maintain; proves what members actually open and care about.
+<strong>Good when:</strong> unsure what members want. <strong>Limit:</strong> weekly, not live; manual step.</p>
+<h3>3. Companion web dashboard (custom build)</h3>
+<p>Small web app (e.g., Next.js + Supabase) fed by Uscreen API/webhooks. Members log in and see A + B above; becs gets C as an admin view. Fully on-brand, can add things Uscreen never will (habit calendar, non-scale-victory journal, buddy pairing, monthly challenge engine).
+<strong>Good when:</strong> a validated concept deserves a real home. <strong>Limit:</strong> biggest lift; needs API access check first.</p>
+<h2>Fizz's recommendation</h2>
+<p>Sequence them: <strong>1 → 2 → 3.</strong> Audit Uscreen this week, run the manual scoreboard as a 3–4 week pilot during a challenge, then build the companion app around whatever members demonstrably love. Metric of success: % of members who check the dashboard weekly and workout-completion lift during the pilot.</p>
+<h2>Open questions for becs</h2>
+<ol>
+<li><strong>The big one:</strong> when a Homie opens the dashboard, what should she <em>feel</em> — "I'm on a roll" (personal), "we're in this together" (community), or should it tell becs/Jo who needs a nudge (ops)?</li>
+<li>What are becs's existing ideas? (Yatu said she has some — they should anchor this.)</li>
+<li>Does she have Uscreen admin access, and does her plan include API access?</li>
+<li>Is there a recurring challenge (e.g., monthly walking challenge) a pilot could ride on?</li>
+</ol>
+
+<div class="footer"><span>Paragonday Systems</span><span></span></div>
+</body>
+</html>
